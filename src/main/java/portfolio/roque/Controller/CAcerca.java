@@ -48,7 +48,7 @@ public class CAcerca {
         Acerca acerca = new Acerca(dtoace.getNombreA());
         sAcerca.save(acerca);
         
-        return new ResponseEntity(new Mensaje("Habilidad agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Acerca agregada"), HttpStatus.OK);
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoAcerca dtoace){
