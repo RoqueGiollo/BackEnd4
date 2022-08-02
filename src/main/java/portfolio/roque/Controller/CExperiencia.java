@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/explab") //parametro a cambiar dependiendo el componente
-@CrossOrigin(origins = "https://backend-portfolio3.herokuapp.com")
+@CrossOrigin(origins = "https://frontendporfolio.web.app")
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;

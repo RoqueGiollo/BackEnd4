@@ -17,7 +17,7 @@ public class RoqueApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://backend-portfolio3.herokuapp.com");
+				registry.addMapping("/**").allowedOrigins("https://frontendporfolio.web.app");
 			}
 		};
 	}

@@ -1,9 +1,7 @@
 package portfolio.roque.Controller;
 
 import portfolio.roque.Dto.dtoAcerca;
-import portfolio.roque.Dto.dtoHabilidad;
 import portfolio.roque.Entity.Acerca;
-import portfolio.roque.Entity.Habilidad;
 import portfolio.roque.Security.Controller.Mensaje;
 import portfolio.roque.Service.SAcerca;
 import java.util.List;
@@ -22,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/acerc") //parametro a cambiar dependiendo el componente
-@CrossOrigin(origins = "https://backend-portfolio3.herokuapp.com")
+@CrossOrigin(origins = "https://frontendporfolio.web.app")
 public class CAcerca {
     @Autowired
     SAcerca sAcerca;
@@ -33,7 +31,7 @@ public class CAcerca {
         return new ResponseEntity(list, HttpStatus.OK);
     }
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Habilidad> getById(@PathVariable("id") int id){
+    public ResponseEntity<Acerca> getById(@PathVariable("id") int id){
         if(!sAcerca.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Acerca acerca = sAcerca.getOne(id).get();
