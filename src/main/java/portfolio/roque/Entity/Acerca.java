@@ -9,7 +9,7 @@ public class Acerca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-	private String nombreA;
+    private String nombreA;
 //Constructores
     public Acerca() {
     }
