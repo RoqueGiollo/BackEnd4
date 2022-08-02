@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/acerc") //parametro a cambiar dependiendo el componente
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://backend-portfolio3.herokuapp.com")
 public class CAcerca {
     @Autowired
     SAcerca sAcerca;
